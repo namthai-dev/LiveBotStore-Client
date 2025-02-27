@@ -6,6 +6,7 @@ import { stackServerApp } from '@/stack';
 
 import { Provider } from '@/components/provider';
 import { Toaster } from '@/components/ui/toaster';
+import { ModalProvider } from '@/components/modal-provider';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -39,6 +40,7 @@ export default async function RootLayout(
       >
         <Provider app={stackServerApp}>
           <Toaster />
+          <ModalProvider />
           {children}
         </Provider>
       </body>
