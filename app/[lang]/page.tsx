@@ -9,7 +9,7 @@ export default async function Page() {
 
   return (
     <div className="h-full w-full">
-      <Billboard data={[...billboard, ...billboard]} />
+      <Billboard data={billboard} />
       <div className="flex flex-col gap-y-8 px-4 sm:px-6 lg:px-8">
         <ProductList title="Featured Products" items={products} />
       </div>
