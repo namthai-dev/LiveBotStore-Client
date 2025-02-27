@@ -3,7 +3,7 @@ import Filter from './components/filter';
 import MobileFilters from './components/mobile-filters';
 import NoResults from '@/components/no-results';
 import ProductCard from '@/components/product-card';
-import getProducts from '@/features/product/action';
+import { getProducts } from '@/features/product/action';
 import { getCategory } from '@/features/category/action';
 import getSizes from '@/features/size/action';
 import getColors from '@/features/color/action';

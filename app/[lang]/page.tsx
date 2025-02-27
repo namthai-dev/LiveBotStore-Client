@@ -1,7 +1,7 @@
 import Billboard from '@/components/billboard';
 import ProductList from '@/components/product-list';
 import getBillboard from '@/features/billboard/action';
-import getProducts from '@/features/product/action';
+import { getProducts } from '@/features/product/action';
 
 export default async function Page() {
   const billboard = await getBillboard();

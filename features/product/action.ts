@@ -10,7 +10,7 @@ interface Query {
   isFeatured?: boolean;
 }
 
-const getProducts = async (query: Query): Promise<Product[]> => {
+export const getProducts = async (query: Query): Promise<Product[]> => {
   const url = qs.stringifyUrl({
     url: URL,
     query: {
@@ -26,4 +26,8 @@ const getProducts = async (query: Query): Promise<Product[]> => {
   return res.json();
 };
 
-export default getProducts;
+export const getProduct = async (id: string): Promise<Product> => {
+  const res = await fetch(`${URL}/${id}`);
+
+  return res.json();
+};
