@@ -1,9 +1,17 @@
-import Spinner from '@/components/spinner';
+import { Skeleton } from '@/components/ui/skeleton';
 
 export default function Loading() {
   return (
-    <div className="flex h-screen items-center justify-center">
-      <Spinner size="icon" />
+    <div className="container h-full p-8">
+      <Skeleton className="aspect-square w-full rounded-xl md:aspect-[2.4/1]" />
+      <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
+        <Skeleton className="aspect-square rounded-xl" />
+        <Skeleton className="aspect-square rounded-xl" />
+        <Skeleton className="aspect-square rounded-xl" />
+        <Skeleton className="aspect-square rounded-xl" />
+        <Skeleton className="aspect-square rounded-xl" />
+        <Skeleton className="aspect-square rounded-xl" />
+      </div>
     </div>
   );
 }

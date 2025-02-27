@@ -8,16 +8,16 @@ export function Provider({
 }: React.ComponentProps<typeof StackProvider>) {
   return (
     <StackProvider {...props}>
-        <ReactQueryClientProvider>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <StackTheme>{children}</StackTheme>
-          </ThemeProvider>
-        </ReactQueryClientProvider>
+      <ReactQueryClientProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <StackTheme>{children}</StackTheme>
+        </ThemeProvider>
+      </ReactQueryClientProvider>
     </StackProvider>
   );
 }
